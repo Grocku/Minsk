@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 300px;
+       }
+    </style>
+  </head>
+  <body>
+  <style>
+  h3 {
+      font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+      font-size: 24px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+  }
+  </style>
+    <h3> <font = Calibri> Demo map page </font> </h3>
+    <div id="map">
+    </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 46.761040, lng: 23.554655};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIEQaKPacfGF271rYQIaKTjmKqsw-9fQA&callback=initMap">
+    </script>
+  </body>
+</html>
